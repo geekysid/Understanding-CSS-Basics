@@ -1,0 +1,135 @@
+.background {
+    background: url("../images/plans-background.jpg");
+    filter: grayscale(40%);
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+}
+
+main {
+    margin-top: 2rem;
+}
+
+.package {
+    background: rgba(213, 255, 220, 0.9);
+    width: 80%;
+    /* padding: 24px; */
+    margin-top: 1rem;
+    border: 3px solid #0e4f1f;
+    border-left: none;
+    position: relative;
+    z-index: -1;
+    overflow: hidden;
+}
+/* 
+.package:first-of-type {
+    margin-top: 5rem;
+} */
+
+.recomended-badge {
+    padding: 0.5rem;
+    font-size: .7rem;
+    background: #ff5454;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1.2rem;
+    z-index: 10;
+    transform: rotate(45deg) translate(2.8rem, -2.25rem);
+    width: 10rem;
+    text-align: center;
+}
+
+.package:hover,
+.package:active {
+    /* box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, 0.5); */
+    border: 3px solid #ff5454;
+    /* border-left: none; */
+}
+
+.package-link {
+    padding: 2rem;
+    display: block;
+    text-decoration: none;
+}
+
+.package-link__header {
+    color: black;
+    font-size: 1.4rem;
+}
+
+.package-link__sub-header {
+    color: grey;
+    font-size: 1.125rem;
+}
+
+.package-link__info {
+    background: white;
+    border: 1px solid #0e4f1f;
+    padding: 1rem;
+    color: black;
+    font-size: 1rem;
+}
+
+.package-premium {
+    background: rgba(14, 79, 31, 0.9);
+}
+
+.package-premium .package-link__header {
+    color: white;
+}
+
+.package-premium .package-link__sub-header {
+    color: lightgrey;
+}
+
+#free {
+    float: right;
+    border-right: none;
+    border-left: 3px solid #0e4f1f;
+}
+
+#free:hover {
+    border: 3px solid #ff5454;;
+}
+
+.clearfix_float {
+    clear:both
+}
+
+
+@media (min-width: 40rem) {
+    main{
+        max-width: 60rem;
+    }
+    .package:hover,
+    .package:active {
+        animation: package-jump 200ms ease-in;
+        border: 3px solid #ff5454;
+        box-shadow: 3px 3px 2px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    #free {
+        float: right;
+    }
+}
+
+@keyframes package-jump {
+    from {
+        transform: translateY(0rem);
+    }
+    33% {
+        transform: translateY(-2rem);
+    }
+    33% {
+        transform: translateY(-1rem);
+    }
+    to {
+        transform: translateY(0);
+    }
+}

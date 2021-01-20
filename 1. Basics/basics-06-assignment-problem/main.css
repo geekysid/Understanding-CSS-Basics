@@ -1,0 +1,22 @@
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    color: orange;
+    font-family: sans-serif;
+}
+
+.second-list {
+    color: green;
+}
+
+code {
+    color: red;
+    font-family: monospace;
+}
+
+#assignment-instructions + ol {
+    color: white;
+    background-color: black;
+}

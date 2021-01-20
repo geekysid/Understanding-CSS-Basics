@@ -1,0 +1,115 @@
+main {
+    margin-top: 5rem;
+}
+
+.signup-title {
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #ff1b68;
+}
+
+.signup-form {
+    width: 80%;
+    display: grid;
+    /* grid-template-columns: 25% 75%; */
+    margin: auto;
+    font-weight: bold;
+    grid-row-gap: 1rem;
+}
+
+.signup-form label,
+.signup-form input,
+.signup-form select
+/* .signup-form button */
+ {
+    width: 100%;
+    /* padding: 0.5rem 0; */
+    line-height: 1.3rem;
+    display: block;
+    font-family: inherit;
+}
+
+.signup-form input:not([type="checkbox"]),
+.signup-form select {
+    border: 1px solid #ccc;
+    padding:0.2rem 0.5rem;
+}
+
+.signup-form .button {
+    display: block;
+    width: 6rem;
+    height: 2rem;
+    background: #ff1b68;
+    border: 1px solid #ff1b68;
+    color: white;
+    font-weight: bold;
+    border-radius: .5rem;
+    margin: 1rem auto;
+}
+
+.signup-form input:not([type="checkbox"]):focus,
+.signup-form select:focus {
+    background: #eee;
+    outline: none;t
+}
+
+.signup-form [type="checkbox"],
+.signup-form [type="checkbox"] + [for="agree-terms"] {
+    display: inline-block;
+    width: auto;
+    vertical-align: bottom;
+    font-size: 0.7rem;
+}
+
+.signup-form [type="checkbox"] {
+    border: 1px solid #ccc;
+    background: white;
+    width: 1rem;
+    height: 1rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+
+.signup-form [type="checkbox"]:focus {
+    outline: none;
+}
+
+
+.signup-form [type="checkbox"]:checked {
+    background-color: #2ddf5c;
+    border: 1px solid green;
+}
+
+/*
+input:invalid {
+    background: rgb(247, 158, 158);
+    outline: 1px solid rgb(247, 158, 158);
+}
+
+input:valid {
+    background: rgb(196, 250, 196);
+    outline: 1px solid rgb(196, 250, 196);
+}
+ */
+
+@media (min-width: 30rem) {
+    .signup-form {
+        max-width: 40rem;
+        grid-template-columns: 25% 75%;
+    }
+
+    .signup-form__checkbox {
+        grid-column: 1 / span 2;
+        justify-self: center;
+    }
+
+    .signup-form__submit {
+        grid-column: 1 / span 2;
+        justify-self: center;
+    }
+
+}

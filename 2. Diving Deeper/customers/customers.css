@@ -1,0 +1,134 @@
+main {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    grid-template-areas: "temp-1"
+                         "temp-2";
+}
+
+.testimonial {
+    font-size: 1.2rem;
+    z-index: -1;
+    /* position: relative; */
+    padding: .2rem
+}
+
+#customer-1 {
+    margin-top: 2rem;
+    grid-area: temp-1;
+}
+
+#customer-2 {
+    grid-area: temp-2;
+}
+
+.testimonial__image-container {
+    width: 80%;
+    margin: auto;
+    transform: skewX(15deg);
+    overflow: hidden;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+#customer-1:hover .testimonial__image-container {
+    animation: flip-customer 1s ease-out forwards;
+}
+
+.testimonial__image{
+    width: 100%;
+    filter: grayscale(80%);
+    display:block;
+    transform: skew(-15deg) scale(1.3);
+    /* box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.5); */
+    /* filter: blur(5px); */
+    /* filter: drop-shadow(2px 2px 2px  red) invert(100%); */
+    /* filter: hue-rotate(45deg); */
+    /* filter: opacity(50%); */
+}
+
+.testimonial__info {
+    text-align: left;
+    padding: .9rem;
+}
+
+#customer-2.testimonial {
+    text-align: right;
+}
+
+#customer-2 .testimonial__info {
+    text-align: right;
+}
+
+.testimonial__name {
+    font-size: 2rem;
+    margin: 0.2rem;
+    color: #ff5454;
+}
+
+.testimonial__subtitle {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #ccc;
+}
+
+.testimonial__subtitle a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.testimonial__subtitle a:hover,
+.testimonial__subtitle a:active {
+color: #7a7a7a;
+}
+
+.testimonial__text {
+    margin: 0.2rem;
+    font-size: 0.9rem;
+}
+
+@media (min-width: 40rem) {
+    .testimonial {
+        max-width: 80rem;
+        margin: 3rem auto;   
+    }
+
+    .testimonial__list {
+        width: 80%;
+        margin: auto;
+    }
+
+    .testimonial__image-container {
+        width:60%;
+        max-width: 575px;
+        min-width: 300px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .testimonial__image{
+        box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .testimonial__info {
+        text-align: right;
+        display: inline-block;
+        vertical-align: middle;
+        width:38%;
+    }
+        
+    #customer-2 .testimonial__info {
+        text-align: left;
+    }
+}
+
+@keyframes flip-customer {
+    0% {
+        transform: rotateY(0) skew(15deg);
+    }
+    50% {
+        transform: rotateY(160deg) skew(15deg);
+    }
+    100% {
+        transform: rotateY(360deg) skew(15deg);
+    }
+}
